@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+  <title>Game Sliders</title>
+</head>
+<body>
+	Sanity: <span id="san_value">5</span>
+	<div style="padding: 20px">
+  	<input style="width:300px" type="range" min="0" max="10" step="1" onchange="showSanValue(this.value)"/>
+  </div>
+  Health: <span id="health_value">5</span>
+  <div style="padding: 20px">
+  	<input style="width:300px" type="range" min="0" max="10" step="1" onchange="showHealthValue(this.value)"/>
+  </div>
+  Reputation: <span id="rep_value">5</span>
+  <div style="padding: 20px">
+  	<input style="width:300px" type="range" min="0" max="10" step="1" onchange="showRepValue(this.value)"/>
+  </div>
+	<script type="text/javascript">
+		function showSanValue(newValue) {
+			document.getElementById("san_value").innerHTML=newValue;
+		}
+		function showHealthValue(newValue) {
+			document.getElementById("health_value").innerHTML=newValue;
+		}
+		function showRepValue(newValue) {
+			document.getElementById("rep_value").innerHTML=newValue;
+		}
+	</script>
+</body>
+</html>
+
+
