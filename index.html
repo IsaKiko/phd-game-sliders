@@ -3,17 +3,17 @@
   <title>Game Sliders</title>
 </head>
 <body>
-	Sanity: <span id="san_value">5</span>
+  Sanity: <span id="san_value">5</span>
 	<div style="padding: 20px">
-  	<input style="width:300px" type="range" min="0" max="10" step="1" onchange="showSanValue(this.value)"/>
+  	<input style="width:300px" type="range" min="0" max="6" step="1" onchange="showSanValue(this.value)"/>
   </div>
-  Health: <span id="health_value">5</span>
+  Food: <span id="health_value">5</span>
   <div style="padding: 20px">
-  	<input style="width:300px" type="range" min="0" max="10" step="1" onchange="showHealthValue(this.value)"/>
+  	<input style="width:300px" type="range" min="0" max="6" step="1" onchange="showHealthValue(this.value)"/>
   </div>
   Reputation: <span id="rep_value">5</span>
   <div style="padding: 20px">
-  	<input style="width:300px" type="range" min="0" max="10" step="1" onchange="showRepValue(this.value)"/>
+  	<input style="width:300px" type="range" min="0" max="6" step="1" onchange="showRepValue(this.value)"/>
   </div>
 	<script type="text/javascript">
 		function showSanValue(newValue) {
