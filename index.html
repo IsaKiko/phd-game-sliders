@@ -1,30 +1,84 @@
 <!doctype html>
 <head>
-  <title>Game Sliders</title>
+  <title>Academia Game</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  Sanity: <span id="san_value">5</span>
-	<div style="padding: 20px">
-  	<input style="width:300px" type="range" min="0" max="6" step="1" onchange="showSanValue(this.value)"/>
-  </div>
-  Food: <span id="health_value">5</span>
-  <div style="padding: 20px">
-  	<input style="width:300px" type="range" min="0" max="6" step="1" onchange="showHealthValue(this.value)"/>
-  </div>
-  Reputation: <span id="rep_value">5</span>
-  <div style="padding: 20px">
-  	<input style="width:300px" type="range" min="0" max="6" step="1" onchange="showRepValue(this.value)"/>
-  </div>
+	<div class="main_section">
+		<h2>Academia Game</h2>
+	</div>
+	<div class="main_section with_border">
+		The Rules: ...
+	</div>
+	<div class="main_section with_border">
+	  Sanity: <span id="san_value"></span>
+		<div class="slider_container">
+	  	<input id="san_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('san_value',this.value)"/>
+	  </div>
+	  Food: <span id="food_value"></span>
+	  <div class="slider_container">
+	  	<input id="food_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('food_value',this.value)"/>
+	  </div>
+	  Reputation: <span id="rep_value"></span>
+	  <div class="slider_container">
+	  	<input id="rep_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('rep_value',this.value)"/>
+	  </div>
+	</div>
+	<div class="main_section with_border">
+		<div class="cube_container">
+			<div id="cube" class="show-front" onclick="startRoll()">
+		    <div class="front">1</div>
+		    <div class="back">2</div>
+		    <div class="right">3</div>
+		    <div class="left">4</div>
+		    <div class="top">5</div>
+		    <div class="bottom">6</div>
+		  </div>
+		</div>
+	</div>
 	<script type="text/javascript">
-		function showSanValue(newValue) {
-			document.getElementById("san_value").innerHTML=newValue;
+		function showValue(id,value) {
+			document.getElementById(id).innerHTML=value;
 		}
-		function showHealthValue(newValue) {
-			document.getElementById("health_value").innerHTML=newValue;
+		function setSlider(slider_id,value_id,value) {
+			document.getElementById(slider_id).value=value;
+			showValue(value_id,value);
 		}
-		function showRepValue(newValue) {
-			document.getElementById("rep_value").innerHTML=newValue;
+		function initSliders() {
+			var san_value = 3;
+			var food_value = 3;
+			var rep_value = 3;
+			setSlider("san_slider","san_value",san_value);
+			setSlider("food_slider","food_value",food_value);
+			setSlider("rep_slider","rep_value",rep_value);
 		}
+		initSliders();
+
+		var box = document.querySelector('.cube_container').children[0]
+		var panelClassName = 'show-front';
+
+		function shuffleArray(array) {
+			var shuffled_array = [];
+			while (array.length > 0) {
+				var index = Math.floor(Math.random()*array.length)
+				shuffled_array.push(array.splice(index,1));
+			}
+			return shuffled_array;
+		}
+
+		function startRoll() {
+			var classes = ["show-front","show-back","show-right","show-left","show-top","show-bottom"];
+			rollDie(shuffleArray(classes));			
+		}
+
+		function rollDie(classes) {
+			panelClassName = classes[0];
+			box.className = panelClassName;
+			if (classes.length > 1) {
+				setTimeout(function(){rollDie(classes.slice(1,classes.length+1))},90);	
+			}
+		}
+
 	</script>
 </body>
 </html>
