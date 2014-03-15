@@ -2,6 +2,24 @@ body {
 	font-size: 28pt;
 }
 
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: gray;
+    height: 15px;
+    width: 98%;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
+} 
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(200,200,200);
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.6);
+}
+
 .title {
 	font-size: 1.5em;
 	font-weight: bold;
@@ -29,7 +47,7 @@ body {
   height: 200px;
   position: relative;
   margin: 40px auto 40px;
-  border: 1px solid #CCC;
+  /*border: 1px solid #CCC;*/
   -webkit-perspective: 1000px;
      -moz-perspective: 1000px;
        -o-perspective: 1000px;
@@ -48,10 +66,10 @@ body {
      -moz-transform-style: preserve-3d;
        -o-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.1s;
-     -moz-transition: -moz-transform 0.1s;
-       -o-transition: -o-transform 0.1s;
-          transition: transform 0.1s;
+  -webkit-transition: -webkit-transform 0.25s;
+     -moz-transition: -moz-transform 0.25s;
+       -o-transition: -o-transform 0.25s;
+          transition: transform 0.25s;
 }
 
 #cube div {
@@ -66,6 +84,7 @@ body {
   color: black;
   text-align: center;
   background: white;
+  box-shadow: 4px 8px 12px rgba(0,0,0,0.6);
 }
 
 #cube div {
