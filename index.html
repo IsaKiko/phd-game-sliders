@@ -8,15 +8,18 @@
 		<span class="title">Academia Game</span>
 	</div>
 	<div class="main_section with_border">
-	  Food: <span id="food_value"></span>
+      <font color="green"> Food: </font> 
+	  <span id="food_value"></span>
 	  <div class="slider_container">
 	  	<input id="food_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('food_value',this.value)"/>
 	  </div>
-	  Reputation: <span id="rep_value"></span>
+	  <font color="purple"> Reputation: </font>
+	  <span id="rep_value"></span>
 	  <div class="slider_container">
 	  	<input id="rep_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('rep_value',this.value)"/>
 	  </div>
-  	  Sanity: <span id="san_value"></span>
+  	  <font color="orange"> Sanity: </font> 
+  	    <span id="san_value"></span>
 		<div class="slider_container">
 	  	<input id="san_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('san_value',this.value)"/>
 	  </div>
@@ -40,18 +43,19 @@
 		The goal of this game is to get tenure, while not running out of resources. Important resources change during the game, while you climb up to the top of the ivory tower of academia.
 		</BR>
 		Game preparation: </BR>
-		Each player chooses a character. Sliders are set to their default position (3 food, 3 reputation, 3 sanity). Cards are shuffled. Each player picks up 2 cards from the PhD card stack. The player who last started their PhD begins. </BR> 
+		Each player chooses a character. Sliders are set to their default position (<font color="green"> 3 food </font> 
+, <font color="purple"> 3 reputation </font>, <font color="orange"> 3 sanity </font>). Cards are shuffled. Each player picks up 2 cards from the PhD card stack. The player who last started their PhD begins. </BR> 
 		</BR>
 		Gameplay:</BR>
-		Players take turns in a clockwise fashion. The active player picks up two more cards and loses one food.
+		Players take turns in a clockwise fashion. The active player picks up two more cards and loses one <font color="green"> food </font>.
 		Each turn, the active player has three time slots (unless otherwise stated on a card). During this time, a player can choose to a) work on their research b) go to a seminar c) play any card. </BR>
 		a) Working on your research: </BR>
-		In order to finish a PhD, a player must collect research tokens in the following order: Literature review, Experiment, Paper. These can be earned by working on their research during their turn at the cost of one time slot. If the research acivity is successful is determined by dice roll. The three different research areas are based on the three different resources and the dice roll must be below the according resource. Literature review is based on food, experiments are based on reputation, writing a paper on sanity. </BR>
+		In order to finish a PhD, a player must collect research tokens in the following order: Literature review, Experiment, Paper. These can be earned by working on their research during their turn at the cost of one time slot. If the research acivity is successful is determined by dice roll. The three different research areas are based on the three different resources and the dice roll must be below the according resource. Literature review is based on <font color="green"> food </font>, experiments are based on <font color="purple"> reputation </font>, writing a paper on <font color="orange"> sanity </font>. </BR>
 		b) Go to a seminar: </BR>
-		Attending a seminar will recover one food at the possible expense of sanity or reputation determined bu die roll. </BR>
+		Attending a seminar will recover one <font color="green"> food </font> at the possible expense of <font color="orange"> sanity </font> or <font color="purple"> reputation </font> determined bu die roll. </BR>
 		1-2 nothing happens </BR>
-		3-4 lose 1 sanity </BR>
-		5-6 lose 1 reputation </BR>		
+		3-4 lose 1 <font color="orange"> sanity </font> </BR>
+		5-6 lose 1 <font color="purple"> reputation </font> </BR>		
 		c) Playing a card:</BR>
 		There are three kinds of cards: Regular playing cards, keepers, twist of fate card. </BR>
 		Regular playing cards can only be played during a players turn. That player gains or loses resources and time mentioned on the card. Some cards may include the possibility to roll a die in order to determine benefits and drawbacks. They may also become a keeper. </BR>
@@ -59,7 +63,7 @@
 		Twist of fate cards can be played on another player at any time of the game.</BR>
 		</BR>
 		Other things that can happen:</BR>
-		A player runs out of a resource: As soon as a player runs out of food, they must instantly recover that. If the player has no cards to recover food, they must attend a seminar at the possible expense of reputation or sanity. If this would result in negative sanity or reputation, that value stays 0. If one of the other stats is 0, the player must recover that stat before being able to do anything else (including seminars and twist of fate cards.). If a keeper card doesn't contribute to that resource, it must be discarded.</BR>
+		A player runs out of a resource: As soon as a player runs out of <font color="green"> food </font>, they must instantly recover that. If the player has no cards to recover <font color="green"> food </font>, they must attend a seminar at the possible expense of <font color="purple"> reputation </font> or <font color="orange"> sanity </font>. If this would result in negative <font color="orange"> sanity </font> or <font color="purple"> reputation </font>, that value stays 0. If one of the other stats is 0, the player must recover that stat before being able to do anything else (including seminars and twist of fate cards.). If a keeper card doesn't contribute to that resource, it must be discarded.</BR>
 		Running out of time while having a keeper card: This can happen if another player plays a twist of fate. If a keeper can not be cared for due to lack of time (or other resources), it must be discarded.</BR>
 	</div>
 

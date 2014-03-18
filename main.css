@@ -1,5 +1,6 @@
 body {
 	font-size: 28pt;
+  background-color: rgb(240,240,240);
 }
 
 input[type="range"] {
@@ -83,7 +84,7 @@ input[type="range"]::-webkit-slider-thumb {
   font-weight: bold;
   color: black;
   text-align: center;
-  background: white;
+  background: rgb(200,200,200);
   box-shadow: 4px 8px 12px rgba(0,0,0,0.6);
 }
 
