@@ -11,7 +11,7 @@
       <font color="green"> Food: </font> 
 	  <span id="food_value"></span>
 	  <div class="slider_container">
-	  	<input id="food_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('food_value',this.value)"/>
+	   	<input id="food_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('food_value',this.value)"/>
 	  </div>
 	  <font color="purple"> Reputation: </font>
 	  <span id="rep_value"></span>
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 	<div class="main_section with_border">
-		Welcome to Grad School! </BR>
+		<b>Welcome to Grad School!</b> </BR>
 		(Witty text here...) </BR>
 		The goal of this game is to get your PhD, while not running out of resources. Important resources change during the game, while you climb up the first steps to the top of the ivory tower of academia.
 		</BR>
@@ -46,24 +46,40 @@
 		Each player chooses a character. Sliders are set to their default position (<font color="green">3 food</font> 
 , <font color="purple"> 3 reputation</font>, <font color="orange"> 3 sanity</font>). Cards are shuffled. Each player picks up 2 cards from the PhD card stack. The player who last started their PhD begins. </BR> 
 		</BR>
-		Gameplay:</BR>
+		<b>Gameplay:</b></BR>
 		Players take turns in a clockwise fashion. The active player picks up two more cards and loses one <font color="green"> food</font>.
-		Each turn, the active player has three time slots (unless otherwise stated on a card). During this time, a player can choose to spend their time one any or all of the following: a) work on research b) go to a seminar c) play one or more cards. The combined time value of these activities has to stay below or equal to the remaining time in that player's turn. </BR>
-		a) Working on research: </BR>
-		In order to finish a PhD, a player must collect research tokens in the following order: Literature review, Experiment, Paper. These can be earned by working on their research during their turn at the cost of one time slot. If the research acivity is successful is determined by dice roll. The three different research areas are based on the three different resources and the die roll must be below the according resource. Literature review is based on <font color="green"> food</font>, experiments are based on <font color="purple"> reputation</font>, writing a paper on <font color="orange"> sanity</font>. </BR>
-		b) Going to a seminar: </BR>
-		Attending a seminar will recover one <font color="green"> food</font> at the possible expense of <font color="orange"> sanity</font> or <font color="purple"> reputation</font> determined bu die roll. </BR>
-		1-2 nothing happens </BR>
-		3-4 lose 1 <font color="orange"> sanity </font> </BR>
-		5-6 lose 1 <font color="purple"> reputation </font> </BR>		
-		c) Playing a card:</BR>
+		Each turn, the active player has three time slots (unless otherwise stated on a card). During this time, a player can choose to spend their time one any or all of the following: a) work on research b) go to a seminar c) get some work done d) call in sick e) play one or more cards. The combined time value of these activities has to stay below or 
+		equal to the remaining time in that player's turn. </BR>
+		</BR>
+		<b>a) Working on research:</b> </BR>
+		In order to finish a PhD, a player must collect research tokens in the following order: Literature review, Experiment, Publish. These can be earned by working on their research during their turn at the cost of two time slots. If the research acivity is successful is determined by dice roll. The three different research areas are based on the three different resources and the die roll must be below the according resource. Literature review is based on <font color="green"> food</font>, experiments are based on <font color="purple"> reputation</font>, writing a paper on <font color="orange"> sanity</font>. The player must roll lower than the acording resource</BR>
+		</BR>
+		<b>b) Going to a seminar:</b> </BR>
+		Attending a seminar costs one time and will recover one <font color="green"> food</font> at the possible expense of <font color="purple"> reputation</font> or <font color="orange"> sanity</font>  determined by die roll. </BR>
+		1-2 Last row seat, you can play on your phone - nothing happens. </BR>
+		3-4 You fall asleep - lose one <font color="purple"> reputation. </font> </BR>	
+		5-6 You get a front row seat - lose one <font color="orange"> sanity. </font> </BR>
+		</BR>
+		<b>c) Doing some work:</b></BR>
+		Doing work costs two time and will recover one <font color="purple"> reputation</font> at the possible expense of <font color="green"> food</font> or <font color="orange"> sanity</font> determined by die roll. </BR>
+		1-2 You eat all the food you stored at your desk for times like these - lose one <font color="green"> food</font>. </BR>
+		3-4 You manage to concentrate and get something done. </BR>	
+		5-6 You realise it's Sunday - lose one <font color="orange"> sanity. </font> </BR>
+		</BR>
+		<b>d) Calling in sick:</b></BR>
+		Takind a sick-day costs three time and will recover one <font color="orange"> sanity</font> at the possible expense of <font color="green"> food</font> or <font color="purple"> reputation</font> determined by die roll. </BR>
+		1-2 You are so bored, you eat all day - lose one  <font color="green"> food. </font> </BR>
+		3-4 You looked fine yesterday, so people aren't so sure they believe you - lose 1 <font color="purple"> reputation. </font> </BR>	
+		5-6 You have a lovely day at home. </BR>
+		</BR>
+		<b>e) Playing a card:</b></BR>
 		There are three kinds of cards: Regular playing cards, keepers, twist of fate card. </BR>
 		Regular playing cards can only be played during a players turn. That player gains or loses resources and time mentioned on the card. Some cards may include the possibility to roll a die in order to determine benefits and drawbacks. They may also become a keeper. </BR>
 		Keepers cards can be played during a player's turn. From that time on, they stay infront of the player until the player decides to discard it (which can be done at any time). Effects will reocurr in every turn and are activated simultaneously. A keeper may also have a one-off effect.</BR>
 		Twist of fate cards can be played on another player at any time of the game.</BR>
 		</BR>
-		Other things that can happen:</BR>
-		A player runs out of a resource: As soon as a player runs out of <font color="green"> food</font>, they must instantly recover that. If the player has no cards to recover <font color="green"> food</font>, they must attend a seminar at the possible expense of <font color="purple"> reputation</font> or <font color="orange"> sanity</font>. If this would result in negative <font color="orange"> sanity</font> or <font color="purple"> reputation</font>, that value stays 0. If one of the other stats is 0, the player must recover that stat before being able to do anything else (including seminars and twist of fate cards). If a keeper card doesn't contribute to that resource, it must be discarded.</BR>
+		<b>Other things that can happen:</b></BR>
+		A player runs out of a resource: As soon as a player runs out of a resource, they must recover it before they can do anything else. If the player has no cards to do this, they must attend a seminar, do some work, or call in sick. If more than one resource is at zero, </fond color="green">food</font> is the first priority, then </font color="orange">sanity</font>, then <font color="purple">reputation</font>. If this results in negative other resource, that value stays 0. If a keeper card doesn't contribute to that resource, it must also be discarded.</BR>
 		Running out of time while having a keeper card: This can happen if another player plays a twist of fate. If a keeper can not be cared for due to lack of time (or other resources), it must be discarded.</BR>
 	</div>
 
