@@ -1,0 +1,9 @@
+someone's turn
+
+start with 3 time slots.
+1) -1 food.
+2) resolve keepers (blue cards), ditch if you don't have the resources to keep them.
+3) something 0? fix it before you can do anything else!
+4) use remaining time slots how you like.
+
+anytime) sabotage other people's phds.
