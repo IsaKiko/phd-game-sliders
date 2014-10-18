@@ -35,12 +35,31 @@ input[type="range"]::-webkit-slider-thumb {
 	border: 1px solid black; 
 }
 
+.hidden {
+  height: 0;
+  overflow: hidden;
+  margin-top: -1em; 
+}
+
 .slider_container {
 	padding: 0.5em 0.5em 1em;
 }
 
 .slider {
 	width: 100%;
+}
+
+.action_button {
+  border-style: solid;
+  width: 10em;
+  line-height: 2em;
+  background-color: lightgray;
+  text-align: center;
+  margin: 0.5em auto;
+}
+
+.outcome-description {
+  text-align: center;
 }
 
 .cube_container {
@@ -168,7 +187,3 @@ input[type="range"]::-webkit-slider-thumb {
        -o-transform: translateZ( -100px ) rotateX(   90deg );
           transform: translateZ( -100px ) rotateX(   90deg );
 }
-
-
-
-
