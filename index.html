@@ -46,9 +46,9 @@
 		</div>
 	</div>
 	<div id="action-buttons" class="main_section with_border">
-		<div class="action_button" onclick="seminar()">Attend a seminar</div>
-		<div class="action_button" onclick="work()">Do some work</div>
-		<div class="action_button" onclick="sick()">Take a sick day</div>
+		<div class="action_button"  style="background-color:green" onclick="seminar()">Attend a seminar (-1 time)</div>
+		<div class="action_button"  style="background-color:purple" onclick="work()">Sit at your desk (-2 time)</div>
+		<div class="action_button"  style="background-color:MediumVioletRed" onclick="sick()">Take a sick day (-3 time)</div>
 	</div>
 	<div id="action-outcome" class="hidden">
 		<div id="action-outcome-text" class="outcome-description"></div>
@@ -93,7 +93,7 @@
 		5-6 You have a lovely day at home. </BR>
 		</BR>
 		<b>e) Working on research (Getting reserach tokens):</b> </BR>
-		In order to finish a PhD, a player must collect research tokens in the following order: Literature review, Experiment, Publish. These can be earned by working on their research during their turn at the cost of two time slots. If the research acivity is successful is determined by dice roll. The three different research areas are based on the three different resources and the die roll must be below the according resource. <font color="green"> Literature review is based on food</font>, <font color="purple"> experiments are based on reputation</font>, <font color="MediumVioletRed"> publishing your work is based on sanity</font>. The player must roll lower than the acording resource</BR>
+		In order to finish a PhD, a player must collect research tokens in the following order: Literature review, Experiment, Publish. These can be earned by working on their research during their turn at the cost of two time slots. If the research acivity is successful is determined by dice roll. The three different research areas are based on the three different resources and the die roll must be below the according resource. <font color="green"> Literature review is based on food</font>, <font color="purple"> experiments are based on reputation</font>, <font color="MediumVioletRed"> publishing is based on sanity</font>. The player must roll lower than the acording resource.</BR>
 		</BR>
 		<b>"I ran out of food/reputation/sanity/time...!":</b></BR>
 		As soon as a player runs out of a resource, they must recover it before they can do anything else. If the player has no cards to do this, they must attend a seminar, do some work, or call in sick. If more than one resource is at zero, <font color="green"> food</font> is the first priority, then <font color="MediumVioletRed"> sanity</font>, then <font color="purple"> reputation</font>. If this results in negative other resource, that value stays 0. If a keeper card doesn't contribute to that resource, it must also be discarded.</BR>

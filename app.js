@@ -48,8 +48,8 @@ function rollDie(classes) {
 function seminar() {
 	action_buttons.className = 'hidden';
 	action_outcome.className = 'main_section with_border';
-	action_outcome_text.innerHTML = 'You attend a seminar and...';
-	action_outcome_stats.innerHTML = '+1 food';
+	action_outcome_text.innerHTML = 'You attend a seminar.';
+	action_outcome_stats.innerHTML = '...';
 	startRoll();
 	setTimeout(function() {
 		var number = 0;
@@ -75,8 +75,8 @@ function seminar() {
 function work() {
 	action_buttons.className = 'hidden';
 	action_outcome.className = 'main_section with_border';
-	action_outcome_text.innerHTML = 'You do some work and...';
-	action_outcome_stats.innerHTML = '+1 reputation';
+	action_outcome_text.innerHTML = 'You sit at your desk.';
+	action_outcome_stats.innerHTML = '...';
 	startRoll();
 	setTimeout(function() {
 		var number = 0;
@@ -87,13 +87,13 @@ function work() {
 			}
 		}
 		if (number <= 2) {
-			action_outcome_text.innerHTML = 'You do some work and...';
-			action_outcome_stats.innerHTML = '+1 reputation';
-		} else if (number <= 4) {
-			action_outcome_text.innerHTML = 'You do some work and...';
+			action_outcome_text.innerHTML = 'You sit at your desk and eat all the food you stored for days like today.';
 			action_outcome_stats.innerHTML = '+1 reputation, -1 food';
+		} else if (number <= 4) {
+			action_outcome_text.innerHTML = 'You sit at your desk and actually get some work done.';
+			action_outcome_stats.innerHTML = '+1 reputation';
 		} else {
-			action_outcome_text.innerHTML = 'You do some work and...';
+			action_outcome_text.innerHTML = 'You sit at your desk until you realise it\'s Sunday.';
 			action_outcome_stats.innerHTML = '+1 reputation, -1 sanity';
 		}
 	}, 1000);
@@ -102,8 +102,8 @@ function work() {
 function sick() {
 	action_buttons.className = 'hidden';
 	action_outcome.className = 'main_section with_border';
-	action_outcome_text.innerHTML = 'You take a sick day and...';
-	action_outcome_stats.innerHTML = '+1 sanity';
+	action_outcome_text.innerHTML = 'You take a sick day.';
+	action_outcome_stats.innerHTML = '...';
 	startRoll();
 	setTimeout(function() {
 		var number = 0;
@@ -114,14 +114,14 @@ function sick() {
 			}
 		}
 		if (number <= 2) {
-			action_outcome_text.innerHTML = 'You take a sick day and...';
-			action_outcome_stats.innerHTML = '+1 sanity';
-		} else if (number <= 4) {
-			action_outcome_text.innerHTML = 'You take a sick day and...';
+			action_outcome_text.innerHTML = 'You take a sick day and eat all your food, just because you are bored.';
 			action_outcome_stats.innerHTML = '+1 sanity, -1 food';
-		} else {
-			action_outcome_text.innerHTML = 'You take a sick day and...';
+		} else if (number <= 4) {
+			action_outcome_text.innerHTML = 'You take a sick day, but everyone thinks you are faking it.';
 			action_outcome_stats.innerHTML = '+1 sanity, -1 reputation';
+		} else {
+			action_outcome_text.innerHTML = 'You take a sick day and relax at home.';
+			action_outcome_stats.innerHTML = '+1 sanity';
 		}
 	}, 1000);
 }
