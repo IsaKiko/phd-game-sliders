@@ -9,20 +9,36 @@
 	</div>
 	<div class="main_section with_border">
       <font color="green"> Food: </font> 
-	  <span id="food_value"></span>
-	  <div class="slider_container">
-	   	<input id="food_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('food_value',this.value)"/>
-	  </div>
+	  <span>
+	  	<div style="display:table-cell; width:7%;"> <p id="food_0" onclick="colorchange(this, food_1, food_2, food_3, food_4, food_5, food_6, 'green')">0</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="food_1" onclick="colorchange(this, food_0, food_2, food_3, food_4, food_5, food_6, 'green')">1</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="food_2" onclick="colorchange(this, food_1, food_0, food_3, food_4, food_5, food_6, 'green')">2</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="food_3" onclick="colorchange(this, food_1, food_2, food_0, food_4, food_5, food_6, 'green')">3</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="food_4" onclick="colorchange(this, food_1, food_2, food_3, food_0, food_5, food_6, 'green')">4</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="food_5" onclick="colorchange(this, food_1, food_2, food_3, food_4, food_0, food_6, 'green')">5</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="food_6" onclick="colorchange(this, food_1, food_2, food_3, food_4, food_5, food_0, 'green')">6</p> </div>
+	  </span>
 	  <font color="purple"> Reputation: </font>
-	  <span id="rep_value"></span>
-	  <div class="slider_container">
-	  	<input id="rep_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('rep_value',this.value)"/>
-	  </div>
+	  <span>
+	  	<div style="display:table-cell; width:7%;"> <p id="rep_0" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_4, rep_5, rep_6, 'purple')">0</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="rep_1" onclick="colorchange(this, rep_0, rep_2, rep_3, rep_4, rep_5, rep_6, 'purple')">1</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="rep_2" onclick="colorchange(this, rep_1, rep_0, rep_3, rep_4, rep_5, rep_6, 'purple')">2</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="rep_3" onclick="colorchange(this, rep_1, rep_2, rep_0, rep_4, rep_5, rep_6, 'purple')">3</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="rep_4" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_0, rep_5, rep_6, 'purple')">4</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="rep_5" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_4, rep_0, rep_6, 'purple')">5</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="rep_6" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_4, rep_5, rep_0, 'purple')">6</p> </div>
+	  </span>
+
   	  <font color="orange"> Sanity: </font> 
-  	    <span id="san_value"></span>
-		<div class="slider_container">
-	  	<input id="san_slider" class="slider" type="range" min="0" max="6" step="1" onchange="showValue('san_value',this.value)"/>
-	  </div>
+	  <span>
+	  	<div style="display:table-cell; width:7%;"> <p id="san_0" onclick="colorchange(this, san_1, san_2, san_3, san_4, san_5, san_6, 'orange')">0</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="san_1" onclick="colorchange(this, san_0, san_2, san_3, san_4, san_5, san_6, 'orange')">1</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="san_2" onclick="colorchange(this, san_1, san_0, san_3, san_4, san_5, san_6, 'orange')">2</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="san_3" onclick="colorchange(this, san_1, san_2, san_0, san_4, san_5, san_6, 'orange')">3</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="san_4" onclick="colorchange(this, san_1, san_2, san_3, san_0, san_5, san_6, 'orange')">4</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="san_5" onclick="colorchange(this, san_1, san_2, san_3, san_4, san_0, san_6, 'orange')">5</p> </div>
+		<div style="display:table-cell; width:7%;"> <p id="san_6" onclick="colorchange(this, san_1, san_2, san_3, san_4, san_5, san_0, 'orange')">6</p> </div>
+	  </span>
 
 	</div>
 	<div class="main_section with_border">
@@ -125,6 +141,25 @@
 				setTimeout(function(){rollDie(classes.slice(1,classes.length+1))},150);	
 			}
 		}
+		
+		function colorchange(elmnt_on,elmnt_off1,elmnt_off2,elmnt_off3,elmnt_off4,elmnt_off5,elmnt_off6, clr) {
+    	elmnt_on.style.color = clr;
+    	elmnt_off1.style.color = 'grey';
+       	elmnt_off2.style.color = 'grey';
+       	elmnt_off3.style.color = 'grey';
+       	elmnt_off4.style.color = 'grey';
+    	elmnt_off5.style.color = 'grey';
+       	elmnt_off6.style.color = 'grey';
+
+		}
+		function initValues() {
+			"food_3".style.color = 'green';
+			"rep_3".style.color = 'purple';
+			"san_3".style.color = 'orange';
+		}
+		initValues();
+
+</script>
 
 	</script>
 </body>
