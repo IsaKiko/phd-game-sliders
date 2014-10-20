@@ -131,38 +131,11 @@ function ok() {
 	action_buttons.className = 'main_section with_border';
 }
 
-function colorchange(elmnt_on,elmnt_off1,elmnt_off2,elmnt_off3,elmnt_off4,elmnt_off5,elmnt_off6, clr) {
-	elmnt_on.style.color = clr;
- 	elmnt_off1.style.color = 'grey';
- 	elmnt_off2.style.color = 'grey';
- 	elmnt_off3.style.color = 'grey';
- 	elmnt_off4.style.color = 'grey';
-	elmnt_off5.style.color = 'grey';
- 	elmnt_off6.style.color = 'grey';
+function colorchange(elmnt_on) {
+	var cl = elmnt_on.className;
+	var elements = document.getElementsByClassName(cl);
+	for (var i =0;i<elements.length;i++){
+		elements[i].className = cl;
+	}
+	elmnt_on.className = cl + " active";
 }
-
-function initValues() {
-	food_3.style.color = 'green';
-	rep_3.style.color = 'purple';
-	san_3.style.color = 'MediumVioletRed';
-	rep_0.style.color = 'grey';
-	san_0.style.color = 'grey';
-	food_0.style.color = 'grey';
-	rep_1.style.color = 'grey';
-	san_1.style.color = 'grey';
-	food_1.style.color = 'grey';
-	rep_2.style.color = 'grey';
-	san_2.style.color = 'grey';
-	food_2.style.color = 'grey';
-	rep_4.style.color = 'grey';
-	san_4.style.color = 'grey';
-	food_4.style.color = 'grey';
-	rep_5.style.color = 'grey';
-	san_5.style.color = 'grey';
-	food_5.style.color = 'grey';
-	rep_6.style.color = 'grey';
-	san_6.style.color = 'grey';
-	food_6.style.color = 'grey';
-}
-
-initValues();

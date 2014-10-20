@@ -9,29 +9,35 @@
 	</div>
 	<div class="main_section with_border">
       <font color="green"> Food: </font> 
-	  	<div style="display:table-cell; width:3%;"> <p id="food_0" onclick="colorchange(this, food_1, food_2, food_3, food_4, food_5, food_6, 'green')">0</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="food_1" onclick="colorchange(this, food_0, food_2, food_3, food_4, food_5, food_6, 'green')">1</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="food_2" onclick="colorchange(this, food_1, food_0, food_3, food_4, food_5, food_6, 'green')">2</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="food_3" onclick="colorchange(this, food_1, food_2, food_0, food_4, food_5, food_6, 'green')">3</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="food_4" onclick="colorchange(this, food_1, food_2, food_3, food_0, food_5, food_6, 'green')">4</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="food_5" onclick="colorchange(this, food_1, food_2, food_3, food_4, food_0, food_6, 'green')">5</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="food_6" onclick="colorchange(this, food_1, food_2, food_3, food_4, food_5, food_0, 'green')">6</p> </div>
-	  <font color="purple"> Reputation: </font>
-	  	<div style="display:table-cell; width:3%;"> <p id="rep_0" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_4, rep_5, rep_6, 'purple')">0</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="rep_1" onclick="colorchange(this, rep_0, rep_2, rep_3, rep_4, rep_5, rep_6, 'purple')">1</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="rep_2" onclick="colorchange(this, rep_1, rep_0, rep_3, rep_4, rep_5, rep_6, 'purple')">2</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="rep_3" onclick="colorchange(this, rep_1, rep_2, rep_0, rep_4, rep_5, rep_6, 'purple')">3</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="rep_4" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_0, rep_5, rep_6, 'purple')">4</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="rep_5" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_4, rep_0, rep_6, 'purple')">5</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="rep_6" onclick="colorchange(this, rep_1, rep_2, rep_3, rep_4, rep_5, rep_0, 'purple')">6</p> </div>
-  	  <font color="MediumVioletRed"> Sanity: </font> 
-	  	<div style="display:table-cell; width:3%;"> <p id="san_0" onclick="colorchange(this, san_1, san_2, san_3, san_4, san_5, san_6, 'MediumVioletRed')">0</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="san_1" onclick="colorchange(this, san_0, san_2, san_3, san_4, san_5, san_6, 'MediumVioletRed')">1</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="san_2" onclick="colorchange(this, san_1, san_0, san_3, san_4, san_5, san_6, 'MediumVioletRed')">2</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="san_3" onclick="colorchange(this, san_1, san_2, san_0, san_4, san_5, san_6, 'MediumVioletRed')">3</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="san_4" onclick="colorchange(this, san_1, san_2, san_3, san_0, san_5, san_6, 'MediumVioletRed')">4</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="san_5" onclick="colorchange(this, san_1, san_2, san_3, san_4, san_0, san_6, 'MediumVioletRed')">5</p> </div>
-		<div style="display:table-cell; width:3%;"> <p id="san_6" onclick="colorchange(this, san_1, san_2, san_3, san_4, san_5, san_0, 'MediumVioletRed')">6</p> </div>
+      <div class="dodgytable">
+		<div class = "dodgytable-cell food" onclick="colorchange(this)">0</div>
+		<div class = "dodgytable-cell food" onclick="colorchange(this)">1</div>
+		<div class = "dodgytable-cell food" onclick="colorchange(this)">2</div>
+		<div class = "dodgytable-cell food active" onclick="colorchange(this)">3</div>
+		<div class = "dodgytable-cell food" onclick="colorchange(this)">4</div>
+		<div class = "dodgytable-cell food" onclick="colorchange(this)">5</div>
+		<div class = "dodgytable-cell food" onclick="colorchange(this)">6</div>
+      </div>
+      <font color="purple"> Reputation: </font> 
+      <div class="dodgytable">
+		<div class = "dodgytable-cell rep" onclick="colorchange(this)">0</div>
+		<div class = "dodgytable-cell rep" onclick="colorchange(this)">1</div>
+		<div class = "dodgytable-cell rep" onclick="colorchange(this)">2</div>
+		<div class = "dodgytable-cell rep active" onclick="colorchange(this)">3</div>
+		<div class = "dodgytable-cell rep" onclick="colorchange(this)">4</div>
+		<div class = "dodgytable-cell rep" onclick="colorchange(this)">5</div>
+		<div class = "dodgytable-cell rep" onclick="colorchange(this)">6</div>
+      </div>
+  <font color="MediumVioletRed"> Sanity: </font> 
+      <div class="dodgytable">
+		<div class = "dodgytable-cell san" onclick="colorchange(this)">0</div>
+		<div class = "dodgytable-cell san" onclick="colorchange(this)">1</div>
+		<div class = "dodgytable-cell san" onclick="colorchange(this)">2</div>
+		<div class = "dodgytable-cell san active" onclick="colorchange(this)">3</div>
+		<div class = "dodgytable-cell san" onclick="colorchange(this)">4</div>
+		<div class = "dodgytable-cell san" onclick="colorchange(this)">5</div>
+		<div class = "dodgytable-cell san" onclick="colorchange(this)">6</div>
+      </div>
 	</div>	
 	<div class="main_section with_border">
 		<div class="cube_container">
